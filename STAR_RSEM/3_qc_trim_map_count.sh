@@ -48,6 +48,7 @@ do
         $infer_experiment -i $STAR_res/$srr/Aligned.sortedByCoord.out.bam -r $RefSeq > $STAR_res/$srr/strand.txt
         strand=`sh $strand_test $STAR_res/$srr/strand.txt`
         echo -e "\tstrand: $strand" >> $log_file
+        #--forward-prob 链倾向性，根据$infer_experiment得到答案
         $RSEM -p $cpu --bam --paired-end --forward-prob $strand $STAR_res/$srr/Aligned.toTranscriptome.out.bam $RSEM_index $RSEM_res/$srr
 
         mv ${srr}*fastq to_tar
