@@ -12,6 +12,7 @@
 # ├── fastqc_res
 # ├── RSEM_res
 # └── STAR_res
+#write for paired-end only
 import os
 import subprocess
 cpu="10"
