@@ -1,4 +1,4 @@
-perl get_iso.pl
+perl get_iso.pl /local/pengying/data/anno/Homo_sapiens.GRCh38.87.chr.gtf
 
 time STAR \
 --runThreadN 35 \
